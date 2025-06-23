@@ -2,7 +2,7 @@
 
 ## Базова інформація
 
-**Base URL:** `http://localhost:3000/api`  
+**Base URL:** `http://localhost:3002/api`  
 **Формат відповіді:** JSON  
 **Кодування:** UTF-8
 
