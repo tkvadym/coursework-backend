@@ -1,10 +1,9 @@
 const ExhibitionService = require("../services/ExhibitionService");
 const GalleryService = require("../services/GalleryService");
 const { sequelize } = require("../models");
-const { getUploadsBaseUrl } = require("../app");
 
-// Автоматично формуємо base URL з конфігурації app.js
-const UPLOADS_BASE_URL = getUploadsBaseUrl();
+UPLOADS_BASE_URL =
+  "https://feisty-flexibility-production.up.railway.app/uploads";
 
 /**
  * Тестові дані для наповнення таблиці виставок
