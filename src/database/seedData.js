@@ -1,8 +1,10 @@
 const ExhibitionService = require("../services/ExhibitionService");
 const GalleryService = require("../services/GalleryService");
 const { sequelize } = require("../models");
+const { getUploadsBaseUrl } = require("../app");
 
-const UPLOADS_BASE_URL = "http://localhost:3002/uploads";
+// Автоматично формуємо base URL з конфігурації app.js
+const UPLOADS_BASE_URL = getUploadsBaseUrl();
 
 /**
  * Тестові дані для наповнення таблиці виставок

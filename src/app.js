@@ -6,6 +6,15 @@ const apiRoutes = require("./routes");
 
 const app = express();
 const PORT = process.env.PORT || 3002;
+const HOST = process.env.HOST || "localhost";
+
+/**
+ * Функція для формування base URL для uploads
+ * @returns {string} Base URL для статичних файлів
+ */
+function getUploadsBaseUrl() {
+  return `http://${HOST}:${PORT}/uploads`;
+}
 
 // Middleware
 app.use(cors());
@@ -81,4 +90,4 @@ async function startServer() {
 // Запускаємо сервер
 startServer();
 
-module.exports = app;
+module.exports = { app, getUploadsBaseUrl, PORT, HOST };
